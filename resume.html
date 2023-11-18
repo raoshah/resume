@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0078d4;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: -30px;
+    border-radius: 5%;
+}
+
+.navbar-left span {
+    font-size: 25px;
+}
+
+.navbar-right img {
+    max-height: 50px; /* Set the maximum height for the logo */
+    border-radius: 50%;
+    margin-top: 10%;
+}
+.about {
+    background-color: #0078d4;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -5px;
+    border-radius: 5%;
+
+}
+
+.skills {
+    background-color: #f2f2f2;
+    margin: -10px 0;
+    padding: 2px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 5%;
+}
+
+.skills h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row; /* Default direction for larger screens */
+}
+
+.skill-category {
+    flex-basis: calc(33.33% - 10px); /* Set the width of each category, considering margin */
+    margin-right: 10px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.skill-category h3 {
+    font-size: 18px;
+    color: #0078d4;
+    margin-bottom: 2px;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.skill-category ul li {
+    font-size: 12px;
+    margin-bottom: 2px;
+    color: #333;
+}
+
+.skill-category ul li:before {
+    content: "\2022";
+    color: #0078d4;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Change direction to column for mobile screens */
+    }
+
+    .skill-category {
+        flex-basis: 100%; /* Set width to 100% for full width on mobile screens */
+        margin-right: 0;
+    }
+}
+
+
+section {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+ul li strong {
+    font-weight: bold;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #0078d4;
+}
+
+.social-links a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #0078d4;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <h1 style="font-size: large;">Shah Rukh Rao</h1>
+        </div>
+        <div class="navbar-right">
+            <img src="{% static 'myapp/images/shahrukh.png' %}" alt="Logo">
+        </div>
+    </nav>
+    <section class="about">
+        <p style="color: #fff; font-size: small; margin-bottom: 1px;">
+            I'm a programmer and web developer with strong skills in Python, Django, and SQL. I'm experienced in creating websites and databases. I also have basic knowledge of JavaScript, CSS, Rust, and Flask. I enjoy writing clean code and aim to make websites that work well for users and businesses. I've built scalable web systems and can be a helpful team member. I like learning about new tech trends and enjoy working on exciting projects.
+        </p>
+    </section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Proficient:</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>SQL</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Basic Knowledge:</h3>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Flask</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Other:</h3>
+                <ul>
+                    <li>Rust</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="portfolio">
+        <h2>Portfolio</h2>
+        <ul>
+            <li>
+                <strong>Project 1:</strong> <a href="https://prasunbhattacharyay.com/">Portfolio Website</a>
+            </li>
+            <li>
+                <strong>Project 2:</strong> <a href="https://jangooji.onrender.com">Study Website</a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
